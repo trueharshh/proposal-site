@@ -1,0 +1,114 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    overflow: hidden;
+}
+
+/* Main Container */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Text Styling */
+h1 {
+    font-size: 2.5rem;
+    color: #ff3b2f;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+p {
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* Proposal Button */
+button {
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    color: #fff;
+    background: #ff3b2f;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    animation: pulse 1.5s infinite alternate;
+}
+
+button:hover {
+    background: #ff1e00;
+    transform: scale(1.1);
+}
+
+/* Hide text initially */
+.hidden {
+    display: none;
+}
+
+/* Proposal Text Reveal */
+#proposalText {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff3b2f;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+/* Floating Hearts */
+.heart {
+    position: fixed;
+    color: red;
+    font-size: 24px;
+    opacity: 1;
+    animation: floatHeart 4s ease-in-out forwards;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
